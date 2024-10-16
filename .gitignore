@@ -1,0 +1,19 @@
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+ 
+# Archivos compilados
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos de logs
+*.log
+
+# Otros
+*.env
