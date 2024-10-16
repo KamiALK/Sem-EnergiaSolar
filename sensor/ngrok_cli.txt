@@ -1,0 +1,4 @@
+docker run -it --name sensor_8000 -e NGROK_AUTHTOKEN=2eeL9rQhVrmhM2jyGLtU1NOL9jL_4136deyYE8SYXUS1fBwAh ngrok/ngrok http 8000 --domain=slug-cheerful-bulldog.ngrok-free.app
+docker run -it --name sensor_8000 -e NGROK_AUTHTOKEN=2eeL9rQhVrmhM2jyGLtU1NOL9jL_4136deyYE8SYXUS1fBwAh ngrok/ngrok http 8000 --domain=ethical-quail-allowing.ngrok-free.app
+
+docker run -it --name sens_8000 -e NGROK_AUTHTOKEN=2eeL9rQhVrmhM2jyGLtU1NOL9jL_4136deyYE8SYXUS1fBwAh ngrok/ngrok http 192.168.20.34:8000 --domain=ethical-quail-allowing.ngrok-free.app
