@@ -43,6 +43,3 @@ Cuando clones un repositorio, usa la URL SSH en lugar de la URL HTTPS:
 ```bash
 git git@github.com:KamiALK/Sem-EnergiaSolar.git
 ```
-
-```
-```
