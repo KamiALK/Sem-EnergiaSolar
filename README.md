@@ -8,16 +8,18 @@ Vamos a necesitar ciertas cosas
 - docker
 - ngrok
 
-## Instalación de programas
+## Diagrama de flujo 
 
-1. en el caso de Git pulse [Git](https://git-scm.com/downloads) lo instalan en su maquina y se registran en github pulse [Github](https://github.com/)
-
-- Es importante aclarar que pueden crear claves ssh  para poder usar comandos en la consola de git
+1. vamos a ver el flujo del trabajo en una pizarra  [enlace](https://app.eraser.io/workspace/5YVWd7fNhIZonTFGqyYq?origin=share)
 
 ## Descargar repositorio
 
-Abrimos una consola y escribimos este comando
+1. Abrimos una consola y escribimos este comando
 
 ```bash
 git clone git@github.com:KamiALK/Sem-EnergiaSolar.git
 ```
+
+## Presentacion
+
+1. Enlace de presentación (enlace)[https://docs.google.com/presentation/d/1WEXNJnKkSYh9aBn0FESBPjQrwbgNtZEkGRFu0xmt2oQ/edit?usp=sharing]
