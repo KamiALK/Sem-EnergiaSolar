@@ -8,7 +8,7 @@ Vamos a necesitar ciertas cosas
 - docker
 - ngrok
 
-## Diagrama de flujo 
+## Diagrama de flujo
 
 1. vamos a ver el flujo del trabajo en una pizarra  [enlace](https://app.eraser.io/workspace/5YVWd7fNhIZonTFGqyYq?origin=share)
 
@@ -22,4 +22,4 @@ git clone git@github.com:KamiALK/Sem-EnergiaSolar.git
 
 ## Presentacion
 
-1. Enlace de presentación (enlace)[https://docs.google.com/presentation/d/1WEXNJnKkSYh9aBn0FESBPjQrwbgNtZEkGRFu0xmt2oQ/edit?usp=sharing]
+1. Enlace de presentación [enlace](https://docs.google.com/presentation/d/1WEXNJnKkSYh9aBn0FESBPjQrwbgNtZEkGRFu0xmt2oQ/edit?usp=sharing)
