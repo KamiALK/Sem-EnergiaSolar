@@ -2,3 +2,14 @@ docker run -it --name sensor_8000 -e NGROK_AUTHTOKEN=2eeL9rQhVrmh_4136deyYEfBwAh
 docker run -it --name sensor_8000 -e NGROK_AUTHTOKEN=2eeL9rQhVrmhM2jyGOL9jL_4136E8SYXUS1fBwAh ngrok/ngrok http 8000 --domain=ethical-quail-allowing.ngrok-free.app
 
 docker run -it --name sens_8000 -e NGROK_AUTHTOKEN=2eeL9rQhVrmhM2jyGLtU4136yYE8SYXUS1fBwAh ngrok/ngrok http 192.168.20.34:8000 --domain=ethical-quail-allowing.ngrok-free.app
+
+
+
+primer clave
+docker run -it --name sens_8000 -e NGROK_AUTHTOKEN=2spB1htVT0Fak3R63ioyT32FWbW_2tgSRNdNs7SSAopsoGDvr ngrok/ngrok http 192.168.20.34:8000 --domain=ethical-quail-allowing.ngrok-free.app
+
+
+
+segunda clave
+
+docker run -it --name sens_3000 -e NGROK_AUTHTOKEN=2tKcTTuDKKkS1SOPFKVJe5BzRMk_43jrukhkMzRqdWcaw38oC -e NGROK_WEB_ADDR=0.0.0.0:4141 ngrok/ngrok http 192.168.20.34:3000 --domain=live-tortoise-firm.ngrok-free.app

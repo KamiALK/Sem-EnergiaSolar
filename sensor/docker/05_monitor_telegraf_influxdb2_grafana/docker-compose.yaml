@@ -1,0 +1,104 @@
+services:
+  grafana:
+    image: grafana/grafana-oss:latest
+    container_name: grafana
+    restart: always
+    user: "0"
+    depends_on:
+      - influxdb2
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    networks:
+      mobel:
+        ipv4_address: 192.168.80.5
+    volumes:
+      - "./grafana-data:/var/lib/grafana"
+  influxdb2:
+    image: influxdb:latest
+    container_name: influxdb2
+    restart: always
+    ports:
+      - 8086:8086
+      - 8089:8089/udp
+    env_file:
+      - .env
+    networks:
+      mobel:
+        ipv4_address: 192.168.80.4
+    volumes:
+      - "./influxdb2-data:/var/lib/influxdb2"
+  # telegraf:
+  #   image: telegraf:latest
+  #   container_name: telegraf
+  #   restart: always
+  #   hostname: "moria"
+  #   user: 1001:984
+  #   depends_on:
+  #     - influxdb2
+  #   networks:
+  #     monitor:
+  #       ipv4_address: 172.28.0.5
+  #   env_file:
+  #     - 'config/env.telegraf'
+  #   volumes:
+  #     - /:/hostfs:ro
+  #     - ./config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #
+  loki:
+    image: grafana/loki:main
+    container_name: loki
+    user: "0"
+    #ports:
+    #  - "3100:3100"
+    networks:
+      mobel:
+        ipv4_address: 192.168.80.3
+    volumes:
+      - ./config/loki-config.yaml:/etc/loki/local-config.yaml
+      - ./volumes-loki:/tmp/loki
+      #- ./volumes-rules:/tmp/loki/rules
+    command: -config.file=/etc/loki/local-config.yaml
+  promtail:
+    image: grafana/promtail:main
+    container_name: promtail
+    user: "0"
+    depends_on:
+      - loki
+    networks:
+      mobel:
+        ipv4_address: 192.168.80.2
+    volumes:
+      - /var/log:/var/log:ro
+      - ./config/promtail-config.yaml:/etc/promtail/config.yml:ro
+    command: -config.file=/etc/promtail/config.yml
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: kamiloalca
+      MYSQL_DATABASE: SolarInfo
+    ports:
+      - "0.0.0.0:3306:3306"
+    networks:
+      mobel:
+        ipv4_address: 192.168.80.8
+    volumes:
+      - mysql_vol:/var/lib/mysql
+
+volumes:
+  mysql_vol:
+
+networks:
+  mobel:
+    name: mobel
+    external: true
+
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.80.0/20
+          gateway:  192.168.80.1

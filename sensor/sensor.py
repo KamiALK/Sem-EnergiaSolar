@@ -1,4 +1,3 @@
-
 import dash
 from dash.dependencies import Output, Input
 from dash import dcc, html
@@ -7,6 +6,9 @@ import json
 import plotly.graph_objs as go
 from collections import deque
 from flask import Flask, request
+
+from functions import insert_data
+from db.conection.conection import get_db
 
 # Configuración del servidor Flask
 server = Flask(__name__)
@@ -33,11 +35,10 @@ app.layout = html.Div(
     ]
 )
 
+
 @app.callback(Output("live_graph", "figure"), Input("counter", "n_intervals"))
 def update_graph(_counter):
-    data = [
-        go.Scatter(x=list(time), y=list(lux_values), name="Light (Lux)")
-    ]
+    data = [go.Scatter(x=list(time), y=list(lux_values), name="Light (Lux)")]
 
     graph = {
         "data": data,
@@ -54,12 +55,18 @@ def update_graph(_counter):
 
     return graph
 
+
 @server.route("/data", methods=["POST"])
 def receive_data():
     if request.method == "POST":
         try:
             data = json.loads(request.data)
-            for d in data['payload']:
+            # tenemos el envio de datos a la base de datos
+            db = next(get_db())
+            insert_data(data, db)
+            db.close()
+
+            for d in data["payload"]:
                 if d.get("name") == "light":
                     ts = datetime.fromtimestamp(d["time"] / 1000000000)
                     if len(time) == 0 or ts > time[-1]:
@@ -70,6 +77,7 @@ def receive_data():
         except Exception as e:
             print(f"Unexpected error: {e}")
     return "success"
+
 
 if __name__ == "__main__":
     app.run_server(port=8000, host="0.0.0.0")

@@ -1,0 +1,3 @@
+usuario=cbadmin
+contraseña=CCJMcolombia#2024
+puerto:8081

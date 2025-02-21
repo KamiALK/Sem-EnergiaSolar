@@ -1,0 +1,179 @@
+{
+    "messageId": 264,
+    "sessionId": "0826ce50-e556-4290-9194-e737850f9920",
+    "deviceId": "1a896e18-4ee3-4d7e-8742-9397a8c5be77",
+    "payload": [
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150154701495800
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150154861497600
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155021495800
+        },
+        {
+            "values": {
+                "bearingAccuracy": 0,
+                "speedAccuracy": 0.19416487216949463,
+                "verticalAccuracy": 5.759581089019775,
+                "horizontalAccuracy": 11.302700996398926,
+                "speed": 0,
+                "bearing": 0,
+                "altitude": 2637.596923828125,
+                "longitude": -74.1708874,
+                "latitude": 4.58373841
+            },
+            "name": "locationgps",
+            "time": 1739150155000561000
+        },
+        {
+            "values": {
+                "bearingAccuracy": 0,
+                "speedAccuracy": 0.19416487216949463,
+                "verticalAccuracy": 5.759581089019775,
+                "horizontalAccuracy": 11.107000350952148,
+                "speed": 1.0586758492081572e-07,
+                "bearing": 0,
+                "altitude": 2637.596923828125,
+                "longitude": -74.1708874,
+                "latitude": 4.5837384
+            },
+            "name": "location",
+            "time": 1739150155000561000
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155181457400
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155341504000
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155501495300
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155661495600
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155821490400
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150155981495300
+        },
+        {
+            "values": {
+                "bearingAccuracy": 0,
+                "speedAccuracy": 0.20248456299304962,
+                "verticalAccuracy": 6.44873571395874,
+                "horizontalAccuracy": 11.774410247802734,
+                "speed": 0,
+                "bearing": 0,
+                "altitude": 2637.599609375,
+                "longitude": -74.17088741,
+                "latitude": 4.58373841
+            },
+            "name": "locationgps",
+            "time": 1739150156000560000
+        },
+        {
+            "values": {
+                "bearingAccuracy": 0,
+                "speedAccuracy": 0.20248456299304962,
+                "verticalAccuracy": 6.44873571395874,
+                "horizontalAccuracy": 11.218000411987305,
+                "speed": 1.1610204353473819e-08,
+                "bearing": 0,
+                "altitude": 2637.599609375,
+                "longitude": -74.1708874,
+                "latitude": 4.5837384
+            },
+            "name": "location",
+            "time": 1739150156000560000
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150156141499600
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150156301501000
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150156461454000
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150156621496800
+        },
+        {
+            "name": "light",
+            "values": {
+                "lux": 12.015000343322754
+            },
+            "accuracy": 3,
+            "time": 1739150156781495000
+        }
+    ]
+}
