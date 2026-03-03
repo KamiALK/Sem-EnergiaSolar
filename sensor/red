@@ -1,1 +1,5 @@
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql
+
+
+                    "Subnet": "172.24.0.0/16",
+                    "Gateway": "172.24.0.1"

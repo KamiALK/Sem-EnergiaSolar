@@ -1,0 +1,18 @@
+service:
+  app:
+    build: .
+    container_name: sensor_app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    environment:
+      DB_NAME: SolarInfo
+      DB_HOST: 172.24.0.4  # IP de MySQL en la red mobel
+      DB_DIALECT: mysql
+      DB_PASSWORD: kamiloalca
+      DB_USER: root
+      DB_PORT: 3306
+    networks:
+      mobel:
+        ipv4_address: 172.24.0.8  # IP específica para tu app

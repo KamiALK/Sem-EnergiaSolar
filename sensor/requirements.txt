@@ -25,3 +25,6 @@ Werkzeug==3.0.4
 zipp==3.20.1
 SQLAlchemy==2.0.25
 PyMySQL==1.1.0
+python-dotenv
+mysqlclient
+pymysql
